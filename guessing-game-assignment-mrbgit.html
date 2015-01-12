@@ -11,6 +11,7 @@ guessSigners = prompt("Can you name one of the signers of the Decaration of Inde
 while(counter < 4){
 	if(signers.indexOf(guessSigners) !== -1){
 		alert("Great Job!");
+		counter += 4
 	}else{
 		secondGuess = prompt("try again");
 		counter++;
