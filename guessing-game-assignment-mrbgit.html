@@ -1,0 +1,33 @@
+<script type="text/javascript">
+var signers,
+	guessSigners,
+	counter,
+	secondGuess,
+	thirdGuess,
+	counter;
+signers = ["John Adams", "Samuel Adams", "Josiah Bartlett", "Carter Braxton", "Charles Carroll", "Samuel Chase", "Abraham Clark", "George Clymer", "William Ellery", "William Floyd", "Benjamin Franklin","Elbridge Gerry","Button Gwinnett","Lyman Hall","John Hancock","Benjamin Harrison","John Hart","Joseph Hewes","Thomas Heyward, Jr.","William Hooper","Stephen Hopkins","Francis Hopkinson","Samuel Huntington","Thomas Jefferson","Francis Lightfoot Lee","Richard Henry Lee","Francis Lewis","Philip Livingston","Thomas Lynch, Jr.","Thomas McKean","Arthur Middleton","Lewis Morris","Robert Morris","John Morton","Thomas Nelson, Jr.","William Paca","Robert Treat Paine","John Penn","George Read","Caesar Rodney","George Ross","Benjamin Rush","Edward Rutledge","Roger Sherman","James Smith","Richard Stockton","Thomas Stone","George Taylor","Charles Thomson","Matthew Thornton","George Walton","William Whipple","William Williams","James Wilson","John Witherspoon","Oliver Wolcott","George Wythe"];
+counter = 1;
+guessSigners = prompt("Can you name one of the signers of the Decaration of Independence? You have 3 guesses.");
+while(counter < 4){
+	if(signers.indexOf(guessSigners) !== -1){
+		alert("Great Job!");
+		counter += 4
+	}else{
+		secondGuess = prompt("try again");
+		counter++;
+		if(signers.indexOf(secondGuess) !== -1){
+			alert("Second time's a charm!");
+			counter++;
+		}else{
+			thirdGuess = prompt("Last chance!");
+			counter++;
+			if(signers.indexOf(thirdGuess) !== -1){
+				alert("You got it!");
+			}else{
+				alert("Not your day, refresh your browser and try again");
+				counter++;
+			}
+		}
+	}
+};
+</script>
